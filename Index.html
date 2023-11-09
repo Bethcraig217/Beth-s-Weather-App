@@ -24,16 +24,25 @@
 <body>
 
     <main>
-        <form>
-            <input type="search" class="search-input" placeholder="Enter a city" required />
+        
+            <form class="search-form" id="search-form" >
+            <input
+            type="search"
+            placeholder="Enter a city" 
+            required
+            id="search-form-input"
+            class="search-form-input"
+            />
             <button type="submit"><i class="fa fa-search"></i></button>
 
+            </form>
+           
         </form>
         <div class="weather-app-data">
             <div class="container CurrentTempWrapper">
                 <div class="currentTempDetails">
                     <div>
-                        <h1 class="weather-app-country" id="city">United States</h1>
+                       
                         <h1 class="weather-app-city" id="city">Detroit</h1>
                         <p class="weather-app-details">
                             <span id="time">LOCAL TIME 10:24 AM</span>
@@ -120,7 +129,7 @@
             href="https://main--beth-app.netlify.app/" target="_blank">netlify</a>
     </footer>
 
-
+<script src="index.js"></script>
 </body>
 
 </html>
