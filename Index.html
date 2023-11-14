@@ -10,18 +10,19 @@
     <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link href="https://fonts.cdnfonts.com/css/barbie" rel="stylesheet">
-    <title>finalthisone</title>
+    <title>Beth's weather app</title>
+
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Forum&family=Nunito&display=swap");
-    
+
         * {
             box-sizing: border-box;
         }
-    
+
         .modeless {
             background-color: #FAF290;
         }
-    
+
         .button-74 {
             background-color: #fbeee0;
             border: 2px solid #422800;
@@ -41,207 +42,209 @@
             -webkit-user-select: none;
             touch-action: manipulation;
         }
-    
+
         .button-74:hover {
             background-color: #fff;
         }
-    
+
         .button-74:active {
             box-shadow: #422800 2px 2px 0 0;
             transform: translate(2px, 2px);
         }
-    
+
         body {
             background-color: #E00B80;
             margin: 0;
             font-size: 25px;
-    
+
             font-family: 'Roboto Mono', sans-serif;
-            background-image: url('https://img.freepik.com/free-vector/80-s-colorful-background-geometric-style_23-2148230327.jpg?w=900&t=st=1698260600~exp=1698261200~hmac=05943b570c4380cd10a0e9455d6e185fbd898812b11451963dad7e2b4d39be01');
+            background-image:
+                url('https://static.vecteezy.com/system/resources/previews/011/265/283/original/abstract-geometric-pattern-with-wavy-lines-paths-halftone-stripes-patern-in-proportion-16-9-monochromatic-concept-palette-of-trending-colors-of-2022-blank-graphic-design-screensaver-vector.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             text-align: center;
         }
-    
+
         h1 {
-    
+
             text-align: center;
-    
+
             font-size: 90px;
             color: #FFA3F8;
         }
-    
+
         h5 {
             text-align: center;
-    
+
             font-size: 25px;
             color: #FFA3F8;
         }
-    
+
         .searching {
             margin-bottom: 100px;
         }
-    
-    
+
+
         .search-text-input {
             font-style: bold;
             font-size: large;
             width: 5px;
         }
-    
+
         .pic {
             width: 250px;
             position: relative;
             display: inline-block;
             margin: 20px;
-    
+
         }
-    
+
         button {
             display: block;
             margin: 0 auto;
         }
     </style>
+
 <body>
-<div class="window">
+    <div class="window">
 
-    <div class="title-bar">
-        <div class="separator"></div>
-        <div class="modeless">
+        <div class="title-bar">
+            <div class="separator"></div>
+            <div class="modeless">
 
-            <form id="search-form">
+                <form id="search-form">
 
-                <input type="search" id="search-text-input" style="width:100%;" placeholder="Type a city.."
-                    autofocus="on" autocomplete="off" />
-
-
+                    <input type="search" id="search-text-input" style="width:100%;" placeholder="Type a city.."
+                        autofocus="on" autocomplete="off" />
 
 
+
+
+
+            </div>
+            <input type="submit" value="Search" class="form-control btn btn-primary shadow-sm" style="width:15%">
 
         </div>
-        <input type="submit" value="Search" class="form-control btn btn-primary shadow-sm" style="width:15%">
+
+        <button class="btn btn-sucess w-100" id="current-location-button">Current Location</button>
+
+        <div class="window-pane">
+            <img src="src/images/earth.png" width="250px" />
+            <h1></h1>
+
+            <h1 class="current" id="city"> </h1>
+            <h2></h2>
+
+            <h2 class=currentLocation </h2>
+                <h3></h3>
+                <div class="styling">
+                    <h5 class="dayTime" id="current-time">
+                    </h5>
+                </div>
+                <h6></h6>
+                <h6 class="weatherDescription" id="weatherDescription"></h6>
+                <span class="temperature" id="temperature"></span><span class="units">
+                    <a href="#" id="fahrenheit-link"></a>
+                    <a href="#" id="celsius-link"></a>
+                </span>
+                <div class="footer">
+                    <footer>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mon 8</h5>
+                                        <p class="card-text">
+                                            <span class="weatherEmoji">☁️</span> <br />
+                                            56˚
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tue 9</h5>
+                                        <p class="card-text">
+                                            <span class="weatherEmoji">🌧️</span> <br />
+                                            68˚
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Wed 10</h5>
+                                        <p class="card-text">
+                                            <span class="weatherEmoji">🌦️</span><br />
+                                            62˚
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Thu 11</h5>
+                                        <p class="card-text">
+                                            <span class="weatherEmoji">🌦️</span><br />
+                                            65˚
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Fri 12</h5>
+                                        <p class="card-text">
+                                            <span class="weatherEmoji">🌦️</span><br />
+                                            69˚
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Sat 13</h5>
+                                        <p class="card-text">
+                                            <span class="weatherEmoji">☁️</span><br />
+                                            16˚
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <br>
+                <p>
+                    This project was coded by
+                    <a href="https://github.com/Bethcraig217" target="_blank">Beth Craig</a> and is
+                    <a href="https://github.com/Bethcraig217?tab=repositories" target="_blank"> on GitHub</a> and
+                    <a href="https://tiny-kringle-eafc5a.netlify.app//" target="_blank">hosted on Netlify</a>
+                </p>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    </div>
+    </div>
+    </div>
+
+    </div>
+    </div>
+    </form>
+
 
     </div>
 
-    <button class="btn btn-sucess w-100" id="current-location-button">Current Location</button>
-
-    <div class="window-pane">
-        <img src="src/images/earth.png" width="250px" />
-        <h1></h1>
-
-        <h1 class="current" id="city"> </h1>
-        <h2></h2>
-
-        <h2 class=currentLocation </h2>
-            <h3></h3>
-            <div class="styling">
-                <h5 class="dayTime" id="current-time">
-                </h5>
-            </div>
-            <h6></h6>
-            <h6 class="weatherDescription" id="weatherDescription"></h6>
-            <span class="temperature" id="temperature">The temp is..</span><span class="units">
-                <a href="#" id="fahrenheit-link"></a>
-                <a href="#" id="celsius-link"></a>
-            </span>
-            <div class="footer">
-                <footer>
-                    <div class="row">
-                        <div class="col-md-2">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Mon 8</h5>
-                                    <p class="card-text">
-                                        <span class="weatherEmoji">☁️</span> <br />
-                                        56˚
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Tue 9</h5>
-                                    <p class="card-text">
-                                        <span class="weatherEmoji">🌧️</span> <br />
-                                        68˚
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Wed 10</h5>
-                                    <p class="card-text">
-                                        <span class="weatherEmoji">🌦️</span><br />
-                                        62˚
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Thu 11</h5>
-                                    <p class="card-text">
-                                        <span class="weatherEmoji">🌦️</span><br />
-                                        65˚
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Fri 12</h5>
-                                    <p class="card-text">
-                                        <span class="weatherEmoji">🌦️</span><br />
-                                        69˚
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Sat 13</h5>
-                                    <p class="card-text">
-                                        <span class="weatherEmoji">☁️</span><br />
-                                        16˚
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <br>
-                    <p>
-                        This project was coded by
-                        <a href="https://github.com/Bethcraig217" target="_blank">Beth Craig</a> and is
-                        <a href="https://github.com/Bethcraig217?tab=repositories" target="_blank"> on GitHub</a> and
-                        <a href="https://tiny-kringle-eafc5a.netlify.app//" target="_blank">hosted on Netlify</a>
-                    </p>
-            </div>
     </div>
-</div>
-</div>
 
-</div>
-</div>
-</div>
-
-</div>
-</div>
-</form>
-
-
-</div>
-
-</div>
-
-</footer>
+    </footer>
 </body>
 <script src="src/index.js"></script>
 
