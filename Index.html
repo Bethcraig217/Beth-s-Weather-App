@@ -2,168 +2,248 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Montserrat:wght@100&family=Oswald:wght@300&family=Quicksand&family=Roboto+Condensed:wght@300&family=Roboto:wght@100&family=Smokum&family=Tilt+Prism&family=Wix+Madefor+Display&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="src/style.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-<link rel="stylesheet" href="src/index.css" />
-    <title>Samples</title>
-</head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/barbie" rel="stylesheet">
+    <title>finalthisone</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Forum&family=Nunito&display=swap");
+    
+        * {
+            box-sizing: border-box;
+        }
+    
+        .modeless {
+            background-color: #FAF290;
+        }
+    
+        .button-74 {
+            background-color: #fbeee0;
+            border: 2px solid #422800;
+            border-radius: 30px;
+            box-shadow: #422800 4px 4px 0 0;
+            color: #422800;
+            cursor: pointer;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 18px;
+            font-family: 'Roboto Mono', sans-serif;
+            padding: 0 auto;
+            line-height: 20px;
+            text-align: center;
+            text-decoration: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+    
+        .button-74:hover {
+            background-color: #fff;
+        }
+    
+        .button-74:active {
+            box-shadow: #422800 2px 2px 0 0;
+            transform: translate(2px, 2px);
+        }
+    
+        body {
+            background-color: #E00B80;
+            margin: 0;
+            font-size: 25px;
+    
+            font-family: 'Roboto Mono', sans-serif;
+            background-image: url('https://img.freepik.com/free-vector/80-s-colorful-background-geometric-style_23-2148230327.jpg?w=900&t=st=1698260600~exp=1698261200~hmac=05943b570c4380cd10a0e9455d6e185fbd898812b11451963dad7e2b4d39be01');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+        }
+    
+        h1 {
+    
+            text-align: center;
+    
+            font-size: 90px;
+            color: #FFA3F8;
+        }
+    
+        h5 {
+            text-align: center;
+    
+            font-size: 25px;
+            color: #FFA3F8;
+        }
+    
+        .searching {
+            margin-bottom: 100px;
+        }
+    
+    
+        .search-text-input {
+            font-style: bold;
+            font-size: large;
+            width: 5px;
+        }
+    
+        .pic {
+            width: 250px;
+            position: relative;
+            display: inline-block;
+            margin: 20px;
+    
+        }
+    
+        button {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
 <body>
+<div class="window">
 
-    <main>
-        
-            <form class="search-form" id="search-form" >
-            <input
-            type="search"
-            placeholder="Enter a city" 
-            required
-            id="search-form-input"
-            class="search-form-input"
-            />
-            <button type="submit"><i class="fa fa-search"></i></button>
+    <div class="title-bar">
+        <div class="separator"></div>
+        <div class="modeless">
 
-            </form>
-           
-        </form>
-        <div class="weather-app-data">
-            <div class="container CurrentTempWrapper">
-                <div class="currentTempDetails">
-                    <div>
-                       
-                        <h1 class="weather-app-city" id="city">Detroit</h1>
-                        <p class="weather-app-details">
-                            <span id="time">LOCAL TIME 10:24 AM</span>
-                            <br>
+            <form id="search-form">
 
-                            <span id="description">few clouds</span>
-                            <br>
-                            Humidity: <strong id="humidity">35%</strong>, Wind:
-                            <strong id="wind-speed">8.23km/h</strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
+                <input type="search" id="search-text-input" style="width:100%;" placeholder="Type a city.."
+                    autofocus="on" autocomplete="off" />
+
+
+
 
 
         </div>
-        <div class="weather-forecast" id="forecast">
-            <div class="weather-forecast-day">
-                <div class="weather-forecast-date">tue</div>
-                <div class="weather-forecast-icon">🌤️</div>
-                <div class="weather-forecast-temperatures">
-                    <div class="weather-forecast-temperature">
-                        <strong>15º</strong>
-                    </div>
-                    <div class="weather-forecast-temperature">9º</div>
-                </div>
+        <input type="submit" value="Search" class="form-control btn btn-primary shadow-sm" style="width:15%">
+
+    </div>
+
+    <button class="btn btn-sucess w-100" id="current-location-button">Current Location</button>
+
+    <div class="window-pane">
+        <img src="src/images/earth.png" width="250px" />
+        <h1></h1>
+
+        <h1 class="current" id="city"> </h1>
+        <h2></h2>
+
+        <h2 class=currentLocation </h2>
+            <h3></h3>
+            <div class="styling">
+                <h5 class="dayTime" id="current-time">
+                </h5>
             </div>
-
-            <div class="weather-forecast-day">
-                <div class="weather-forecast-date">wed</div>
-                <div class="weather-forecast-icon">🌤️</div>
-                <div class="weather-forecast-temperatures">
-                    <div class="weather-forecast-temperature">
-                        <strong>15º</strong>
+            <h6></h6>
+            <h6 class="weatherDescription" id="weatherDescription"></h6>
+            <span class="temperature" id="temperature">The temp is..</span><span class="units">
+                <a href="#" id="fahrenheit-link"></a>
+                <a href="#" id="celsius-link"></a>
+            </span>
+            <div class="footer">
+                <footer>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mon 8</h5>
+                                    <p class="card-text">
+                                        <span class="weatherEmoji">☁️</span> <br />
+                                        56˚
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tue 9</h5>
+                                    <p class="card-text">
+                                        <span class="weatherEmoji">🌧️</span> <br />
+                                        68˚
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Wed 10</h5>
+                                    <p class="card-text">
+                                        <span class="weatherEmoji">🌦️</span><br />
+                                        62˚
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Thu 11</h5>
+                                    <p class="card-text">
+                                        <span class="weatherEmoji">🌦️</span><br />
+                                        65˚
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Fri 12</h5>
+                                    <p class="card-text">
+                                        <span class="weatherEmoji">🌦️</span><br />
+                                        69˚
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sat 13</h5>
+                                    <p class="card-text">
+                                        <span class="weatherEmoji">☁️</span><br />
+                                        16˚
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="weather-forecast-temperature">9º</div>
-                </div>
-            </div>
-
-            <div class="weather-forecast-day">
-                <div class="weather-forecast-date">thu</div>
-                <div class="weather-forecast-icon">🌤️</div>
-                <div class="weather-forecast-temperatures">
-                    <div class="weather-forecast-temperature">
-                        <strong>15º</strong>
                     </div>
-                    <div class="weather-forecast-temperature">9º</div>
-                </div>
+                    <br>
+                    <p>
+                        This project was coded by
+                        <a href="https://github.com/Bethcraig217" target="_blank">Beth Craig</a> and is
+                        <a href="https://github.com/Bethcraig217?tab=repositories" target="_blank"> on GitHub</a> and
+                        <a href="https://tiny-kringle-eafc5a.netlify.app//" target="_blank">hosted on Netlify</a>
+                    </p>
             </div>
+    </div>
+</div>
+</div>
 
-            <div class="weather-forecast-day">
-                <div class="weather-forecast-date">fri</div>
-                <div class="weather-forecast-icon">🌤️</div>
-                <div class="weather-forecast-temperatures">
-                    <div class="weather-forecast-temperature">
-                        <strong>15º</strong>
-                    </div>
-                    <div class="weather-forecast-temperature">9º</div>
-                </div>
-            </div>
+</div>
+</div>
+</div>
 
-            <div class="weather-forecast-day">
-                <div class="weather-forecast-date">Sat</div>
-                <div class="weather-forecast-icon">🌤️</div>
-                <div class="weather-forecast-temperatures">
-                    <div class="weather-forecast-temperature">
-                        <strong>15º</strong>
-                    </div>
-                    <div class="weather-forecast-temperature">9º</div>
-                </div>
-            </div>
-        </div>
+</div>
+</div>
+</form>
 
 
+</div>
 
-    </main>
+</div>
 
-<br>
-<br>
-<br>
-    <footer>coded by
-        <a href="https://github.com/Bethcraig217" target="_blank"> beth craig</a>.hosted on <a
-            href="https://github.com/Bethcraig217/Beth-s-Weather-App" target="_blank">github </a> and website hosted on <a
-            href="https://main--beth-app.netlify.app/" target="_blank">netlify</a>
-    </footer>
-
-<script src="index.js"></script>
+</footer>
 </body>
+<script src="src/index.js"></script>
+
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
