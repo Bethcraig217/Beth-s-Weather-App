@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
-    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link href="https://fonts.cdnfonts.com/css/barbie" rel="stylesheet">
     <title>Beth's weather app</title>
 
@@ -140,21 +141,46 @@ margin: 0 auto;
                     <h5 class="dayTime" id="current-time">
                     </h5>
                 </div>
-                <h6></h6>
-                <h6 class="weatherDescription" id="weatherDescription"></h6>
-                <span class="temperature" id="temperature"></span><span class="units">
-                    <a href="#" id="fahrenheit-link"></a>
-                    <a href="#" id="celsius-link"></a>
-                </span>
+                            <span class="temperature" id="temperature"></span>
+                            
+                            
+                            </span>
+                <h6>
+                    <h6 class="weatherDescription" id="weatherDescription"></h6>
+                </h6>
+                <p class="weather-app-details">
+                    <span id="time"></span>
+                    <span id="description"></span>
+                    <br />
+                    Humidity: <strong id="humidity"></strong> Wind:
+                    <strong id="wind-speed"></strong>
+                </p>
+                </div>
+                <div class="weather-app-temperature-container">
+                    <div id="icon"></div>
+                  
+            
+     
+                
+                <div id="temperature">
+                    <!-- Temperature value will be displayed here -->
+                </div>
+                </div>
+                </div>
+            </div>
                 <div class="footer">
                     <footer>
                         <div class="row">
                             <div class="col-md-2">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="card-title">Mon 8</h5>
+                                        <h5 class="card-title" id="monday">Mon</h5>
+                                        <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+                                                  forecastDay.condition.icon
+                                                }.png"
+                                            </br>
                                         <p class="card-text">
-                                            <span class="weatherEmoji">☁️</span> <br />
+                                      
                                             56˚
                                         </p>
                                     </div>
@@ -163,58 +189,74 @@ margin: 0 auto;
                             <div class="col-md-2">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="card-title">Tue 9</h5>
+                                        <h5 class="card-title" id="monday">Tues</h5>
+                                        <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+                                            forecastDay.condition.icon }.png"
+                                     </br>
+                                 
                                         <p class="card-text">
-                                            <span class="weatherEmoji">🌧️</span> <br />
-                                            68˚
+                                        
+                                            56˚
                                         </p>
-                                    </div>
+                                        </div>
+                                        </div>
+                                        </div>
+                        <div class="col-md-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title" id="monday">Tues</h5>
+                                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+                                                                    forecastDay.condition.icon }.png" </br>
+                        
+                                    <p class="card-text">
+                        
+                                        56˚
+                                    </p>
                                 </div>
                             </div>
-                            <div class="col-md-2">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Wed 10</h5>
-                                        <p class="card-text">
-                                            <span class="weatherEmoji">🌦️</span><br />
-                                            62˚
-                                        </p>
-                                    </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title" id="monday">Tues</h5>
+                                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+                                                                    forecastDay.condition.icon }.png" </br>
+                        
+                                    <p class="card-text">
+                        
+                                        56˚
+                                    </p>
                                 </div>
                             </div>
-                            <div class="col-md-2">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Thu 11</h5>
-                                        <p class="card-text">
-                                            <span class="weatherEmoji">🌦️</span><br />
-                                            65˚
-                                        </p>
-                                    </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title" id="monday">Tues</h5>
+                                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+                                                                    forecastDay.condition.icon }.png" </br>
+                        
+                                    <p class="card-text">
+                        
+                                        56˚
+                                    </p>
                                 </div>
                             </div>
-                            <div class="col-md-2">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Fri 12</h5>
-                                        <p class="card-text">
-                                            <span class="weatherEmoji">🌦️</span><br />
-                                            69˚
-                                        </p>
-                                    </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title" id="monday">Tues</h5>
+                                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+                                                                    forecastDay.condition.icon }.png" </br>
+                        
+                                    <p class="card-text">
+                        
+                                        56˚
+                                    </p>
                                 </div>
                             </div>
-                            <div class="col-md-2">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Sat 13</h5>
-                                        <p class="card-text">
-                                            <span class="weatherEmoji">☁️</span><br />
-                                            16˚
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                        </div>
                         </div>
                 </div>
                 <br>

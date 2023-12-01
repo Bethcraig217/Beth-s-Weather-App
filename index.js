@@ -51,7 +51,7 @@ let now = new Date();
     celsiusLink.addEventListener("click", convertToCelsius);
 
     function showTemp(response) {
-        let city = document.querySelector("#city");
+        let city = document.querySelector("#weatherdescription");
         let temperature = Math.round(response.data.main.temp);
         let tempElement = document.querySelector("#temperature");
         let description = document.querySelector("#weatherDescription");
@@ -70,6 +70,7 @@ let now = new Date();
 
         axios.get(apiUrl).then(showTemp);
     }
+    console.log(showPosition.coords.latitude);
     function getPosition(event) {
         event.preventDefault();
         navigator.geolocation.getCurrentPosition(showPosition);
@@ -77,3 +78,39 @@ let now = new Date();
 
     let button = document.querySelector("#current-location-button");
     button.addEventListener("click", getPosition);
+
+    function refreshWeather(response) {
+  let temperatureElement = document.querySelector("#temperature");
+  let temperature = response.data.temperature.current;
+  let cityElement = document.querySelector("#city");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windSpeedElement = document.querySelector("#wind-speed");
+  let timeElement = document.querySelector("#time");
+  let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
+
+  cityElement.innerHTML = response.data.city;
+  timeElement.innerHTML = formatDate(date);
+  descriptionElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
+  temperatureElement.innerHTML = Math.round(temperature);
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+    }
+    function searchCity(city) {
+  let apiKey = "a1990de4a679383e9dc43b50377155b6";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  axios.get(apiUrl).then(refreshWeather);
+}
+
+function handleSearchSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-form-input");
+
+  searchCity(searchInput.value);
+}
+
+let searchFormElement = document.querySelector("#search-form");
+searchFormElement.addEventListener("submit", handleSearchSubmit);
+

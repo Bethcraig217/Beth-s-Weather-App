@@ -8,19 +8,47 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
+   
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Montserrat:wght@100&family=Oswald:wght@300&family=Quicksand&family=Roboto+Condensed:wght@300&family=Roboto:wght@100&family=Smokum&family=Tilt+Prism&family=Wix+Madefor+Display&family=Zeyada&display=swap"
+    rel="stylesheet">
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-    <link href="https://fonts.cdnfonts.com/css/barbie" rel="stylesheet">
+    
     <title>Beth's weather app</title>
 
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Forum&family=Nunito&display=swap");
+    .weatherdescription{
+        font-size: large;
+    }
 
         * {
             box-sizing: border-box;
+                font-family: 'Barlow', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Smokum', serif;
+font-family: 'Tilt Prism', sans-serif;
+font-family: 'Wix Madefor Display', sans-serif;
+font-family: 'Zeyada', cursive;
         }
 
         .modeless {
             background-color: #FAF290;
+                font-family: 'Barlow', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Smokum', serif;
+font-family: 'Tilt Prism', sans-serif;
+font-family: 'Wix Madefor Display', sans-serif;
+font-family: 'Zeyada', cursive;
+
         }
 
         .button-74 {
@@ -33,7 +61,8 @@
             display: inline-block;
             font-weight: 600;
             font-size: 18px;
-            font-family: 'Roboto Mono', sans-serif;
+   
+
             padding: 0 auto;
             line-height: 20px;
             text-align: center;
@@ -50,14 +79,42 @@
         .button-74:active {
             box-shadow: #422800 2px 2px 0 0;
             transform: translate(2px, 2px);
+            font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Smokum', serif;
+font-family: 'Tilt Prism', sans-serif;
+font-family: 'Wix Madefor Display', sans-serif;
+font-family: 'Zeyada', cursive;
         }
-
+.styling{
+    font-family: 'Barlow', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Smokum', serif;
+font-family: 'Tilt Prism', sans-serif;
+font-family: 'Wix Madefor Display', sans-serif;
+font-family: 'Zeyada', cursive;
+}
         body {
-            background-color: #E00B80;
+     
             margin: 0;
             font-size: 25px;
-
-            font-family: 'Roboto Mono', sans-serif;
+font-family: 'Barlow', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Smokum', serif;
+font-family: 'Tilt Prism', sans-serif;
+font-family: 'Wix Madefor Display', sans-serif;
+font-family: 'Zeyada', cursive;
             background-image:
                 url('https://static.vecteezy.com/system/resources/previews/011/265/283/original/abstract-geometric-pattern-with-wavy-lines-paths-halftone-stripes-patern-in-proportion-16-9-monochromatic-concept-palette-of-trending-colors-of-2022-blank-graphic-design-screensaver-vector.jpg');
             background-size: cover;
@@ -70,19 +127,63 @@
 
             text-align: center;
 
-            font-size: 90px;
-            color: #FFA3F8;
+            font-size: 70px;
+            color: #282840;
+                 font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Smokum', serif;
+font-family: 'Tilt Prism', sans-serif;
+font-family: 'Wix Madefor Display', sans-serif;
+font-family: 'Zeyada', cursive;
         }
 
         h5 {
-            text-align: center;
+            text-align: left;
 
             font-size: 25px;
-            color: #FFA3F8;
+            color: #282840
+        }
+        h6{
+               text-align: left;
+
+            font-size: 40px;
+            color: #282840;
+                 font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Smokum', serif;
+font-family: 'Tilt Prism', sans-serif;
+font-family: 'Wix Madefor Display', sans-serif;
+font-family: 'Zeyada', cursive;
+        }
+        .card-body{
+            font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Smokum', serif;
+font-family: 'Tilt Prism', sans-serif;
+font-family: 'Wix Madefor Display', sans-serif;
+font-family: 'Zeyada', cursive;
         }
 
         .searching {
             margin-bottom: 100px;
+            font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Smokum', serif;
+font-family: 'Tilt Prism', sans-serif;
+font-family: 'Wix Madefor Display', sans-serif;
+font-family: 'Zeyada', cursive;
         }
 
 
@@ -103,10 +204,60 @@
         button {
             display: block;
             margin: 0 auto;
+            font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Smokum', serif;
+font-family: 'Tilt Prism', sans-serif;
+font-family: 'Wix Madefor Display', sans-serif;
+font-family: 'Zeyada', cursive;
+        }
+   p     {
+            font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Smokum', serif;
+font-family: 'Tilt Prism', sans-serif;
+font-family: 'Wix Madefor Display', sans-serif;
+font-family: 'Zeyada', cursive;
+        }
+        .btnstyle{
+               font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Smokum', serif;
+font-family: 'Tilt Prism', sans-serif;
+font-family: 'Wix Madefor Display', sans-serif;
+font-family: 'Zeyada', cursive;
+        }
+        .temperature{
+               text-align: right;
+
+            font-size: 30px;
+            color: #282840;
+                 font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Smokum', serif;
+font-family: 'Tilt Prism', sans-serif;
+font-family: 'Wix Madefor Display', sans-serif;
+font-family: 'Zeyada', cursive;
+        }
+        img{
+            text-align: right;
         }
     </style>
 
 <body>
+    <div class="styling">
     <div class="window">
 
         <div class="title-bar">
@@ -126,94 +277,35 @@
             <input type="submit" value="Search" class="form-control btn btn-primary shadow-sm" style="width:15%">
 
         </div>
-
+<div class="btnstyle">
         <button class="btn btn-sucess w-100" id="current-location-button">Current Location</button>
-
+</div>
         <div class="window-pane">
-            <img src="src/images/earth.png" width="250px" />
+            <div class="img">
+            <img src="src/images/cloudy.png" width="150px" />
+            </div>
+          
             <h1></h1>
 
             <h1 class="current" id="city"> </h1>
             <h2></h2>
+            <h5 class="dayTime" id="current-time">
+            </h5>
 
             <h2 class=currentLocation </h2>
                 <h3></h3>
                 <div class="styling">
-                    <h5 class="dayTime" id="current-time">
-                    </h5>
+                    
                 </div>
                 <h6></h6>
-                <h6 class="weatherDescription" id="weatherDescription"></h6>
+                <h6 class="weatherDescription" id="weatherDescription">weatherDescription</h6>
                 <span class="temperature" id="temperature"></span><span class="units">
                     <a href="#" id="fahrenheit-link"></a>
                     <a href="#" id="celsius-link"></a>
+                    <div class="wind speed"></div>
+                    <div class="humidity"></div>
                 </span>
-                <div class="footer">
-                    <footer>
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Mon 8</h5>
-                                        <p class="card-text">
-                                            <span class="weatherEmoji">☁️</span> <br />
-                                            56˚
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Tue 9</h5>
-                                        <p class="card-text">
-                                            <span class="weatherEmoji">🌧️</span> <br />
-                                            68˚
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Wed 10</h5>
-                                        <p class="card-text">
-                                            <span class="weatherEmoji">🌦️</span><br />
-                                            62˚
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Thu 11</h5>
-                                        <p class="card-text">
-                                            <span class="weatherEmoji">🌦️</span><br />
-                                            65˚
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Fri 12</h5>
-                                        <p class="card-text">
-                                            <span class="weatherEmoji">🌦️</span><br />
-                                            69˚
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Sat 13</h5>
-                                        <p class="card-text">
-                                            <span class="weatherEmoji">☁️</span><br />
-                                            16˚
-                                        </p>
+         
                                     </div>
                                 </div>
                             </div>
@@ -245,6 +337,7 @@
     </div>
 
     </footer>
+    </div>
 </body>
 <script src="src/index.js"></script>
 

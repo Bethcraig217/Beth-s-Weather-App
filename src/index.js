@@ -59,6 +59,7 @@ let now = new Date();
         tempElement.innerHTML = `${temperature} F°| C° `;
         description.innerHTML = `${response.data.weather[0].description}`;
     }
+    console.log(showTemp.response);
 
     function showPosition(position) {
         console.log(position);

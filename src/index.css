@@ -1,4 +1,4 @@
-        @import url("https://fonts.googleapis.com/css2?family=Forum&family=Nunito&display=swap");
+     
 
         * {
             box-sizing: border-box;
@@ -7,7 +7,9 @@
         .modeless {
             background-color: #FAF290;
         }
-
+.search{
+    text-align: center;
+}
         .button-74 {
             background-color: #fbeee0;
             border: 2px solid #422800;
@@ -18,7 +20,16 @@
             display: inline-block;
             font-weight: 600;
             font-size: 18px;
-            font-family: 'Roboto Mono', sans-serif;
+    font-family: 'Barlow', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Oswald', sans-serif;
+        font-family: 'Quicksand', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-family: 'Smokum', serif;
+        font-family: 'Tilt Prism', sans-serif;
+        font-family: 'Wix Madefor Display', sans-serif;
+        font-family: 'Zeyada', cursive;
             padding: 0 auto;
             line-height: 20px;
             text-align: center;
