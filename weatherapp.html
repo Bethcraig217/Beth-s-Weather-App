@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
-<link rel="stylesheet" href="src/style.css" />
+   <link rel="stylesheet" href="src/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link href="https://fonts.cdnfonts.com/css/barbie" rel="stylesheet">
     <title>Beth's weather app</title>
@@ -21,24 +21,15 @@
 
         <div class="title-bar">
             <div class="separator"></div>
-            <div class="modeless">
-
-                <form id="search-form">
-
-                    <input type="search" id="search-text-input" style="width:100%;" placeholder="Type a city.."
-                        autofocus="on" autocomplete="off" />
-
-
-
-
-
-            </div>
-            <input type="submit" value="Search" class="form-control btn btn-primary shadow-sm" style="width:15%">
-
+        <div class="modeless w-100">
+            <form id="search-form" class="d-flex align-items-center w-100">
+                <input type="search" id="search-text-input" placeholder="Type a city.." autofocus="on" autocomplete="off" />
+                <input type="submit" value="Search" class="form-control btn btn-primary shadow-sm submit-btn">
+                <div class="btnstyle">
+                    <button class="btn btn-sucess btn-location" id="current-location-button">Current Location</button>
+                </div>
+            </form>
         </div>
-
-        <button class="btn btn-sucess w-100" id="current-location-button">Current Location</button>
-
         <div class="window-pane">
             <img src="src/images/earth.png" width="250px" />
             <h1></h1>

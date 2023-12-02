@@ -9,6 +9,22 @@
                  .modeless {
                      background-color: #FAF290;
                  }
+                                 .search-form {
+                                     display: flex;
+                                     align-items: center;
+                                 }
+                
+                                 .submit-btn {
+                                     max-width: 100px;
+                                 }
+                
+                                 .btn-location {
+                                     width: auto !important;
+                                     transform: none !important;
+                                     margin: 0 !important;
+                                 }
+                
+                              
         
                  .button-74 {
                      background-color: #fbeee0;
