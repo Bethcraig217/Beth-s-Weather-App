@@ -1,53 +1,53 @@
-      let now = new Date();
-        let day = now.getDay();
-        let days = [
-            "Sunday",
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"
-        ];
+let now = new Date();
+let day = now.getDay();
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 
-        let hours = now.getHours();
-        let minutes = now.getMinutes();
-        let amPm = hours >= 12 ? 'PM' : 'AM';
+let hours = now.getHours();
+let minutes = now.getMinutes();
+let amPm = hours >= 12 ? "PM" : "AM";
 
-        hours = hours % 12;
-        hours = hours ? hours : 12; // the hour '0' should be '12'
-        hours = hours < 10 ? + hours : hours;
-        minutes = minutes < 10 ? '0' + minutes : minutes;
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+hours = hours < 10 ? +hours : hours;
+minutes = minutes < 10 ? "0" + minutes : minutes;
 
-        let currentDay = days[now.getDay()];
-        let h5 = document.querySelector("#current-time");
-        h5.innerHTML = `${currentDay} ${hours}:${minutes} ${amPm}`;
-        function searchCity(event) {
-            event.preventDefault();
-            let cityInput = document.querySelector("#city-input");
-            let h2 = document.querySelector("#current-city");
-            if (cityInput.value) {
-                h2.innerHTML = `${cityInput.value}`;
-            } else {
-                h2.innerHTML = null;
-                alert("Please enter a city");
-            }
-        }
-        let form = document.querySelector("#search-form");
-        form.addEventListener("submit", searchCity);
-        function refreshWeather(response) {
-let humidityElement = document.querySelector("#humidity");
-let windSpeedElement = document.querySelector("#wind-speed");
+let currentDay = days[now.getDay()];
+let h5 = document.querySelector("#current-time");
+h5.innerHTML = `${currentDay} ${hours}:${minutes} ${amPm}`;
+function search(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#search-text-input");
+  let h2 = document.querySelector("#city");
+  if (cityInput.value) {
+    h2.innerHTML = `${cityInput.value}`;
+    searchCity(cityInput.value);
+  } else {
+    h2.innerHTML = null;
+    alert("Please enter a city");
+  }
+}
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", search);
+function refreshWeather(response) {
+  let humidityElement = document.querySelector("#humidity");
+  let windSpeedElement = document.querySelector("#wind-speed");
   let date = new Date(response.data.time * 1000);
 
-  let iconElement = document.querySelector("#monIcon");
+  let iconElement = document.querySelector("#icon");
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="monIcon" />`;
 
-
- humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
-        }
-        
+}
+
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
@@ -81,16 +81,8 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
-
-
 function searchCity(city) {
   let apiKey = "1a747f2d7ac32a100bt13fab8776o6ca";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(refreshWeather);
 }
-
-
-
-
-
-   
