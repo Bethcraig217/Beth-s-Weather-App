@@ -80,6 +80,16 @@ function displayForecast(response) {
   forecastHTML += `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+function showTemp(response) {
+  let city = document.querySelector("#city");
+  let temperature = Math.round(response.data.main.temp);
+  let tempElement = document.querySelector("#temperature");
+  let description = document.querySelector("#weatherDescription");
+  city.innerHTML = response.data.name;
+  tempElement.innerHTML = `${temperature} F°| C° `;
+  description.innerHTML = `${response.data.weather[0].description}`;
+}
+
 
 function searchCity(city) {
   let apiKey = "1a747f2d7ac32a100bt13fab8776o6ca";
