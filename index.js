@@ -99,7 +99,7 @@ function showTemp(response) {
   let tempElement = document.querySelector("#temperature");
   let description = document.querySelector("#weatherDescription");
   city.innerHTML = response.data.name;
-  tempElement.innerHTML = `${temperature} F°| C° `;
+temperatureElement.innerHTML = Math.round(temperature);
   description.innerHTML = `${response.data.weather[0].description}`;
 }
 
@@ -108,3 +108,4 @@ function searchCity(city) {
   let apiKey = "1a747f2d7ac32a100bt13fab8776o6ca";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(refreshWeather);
+}
