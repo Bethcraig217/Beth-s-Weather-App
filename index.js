@@ -34,6 +34,12 @@ function search(event) {
     alert("Please enter a city");
   }
 }
+function formatDay(timestamp) {
+    let date = new Date(timestamp * 1000);
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  
+    return days[date.getDay()];
+  }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 function refreshWeather(response) {
@@ -46,7 +52,14 @@ function refreshWeather(response) {
 
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
+  getForecast(response.data.city)
 }
+
+function getForecast(city) {
+    let apiKey = "1a747f2d7ac32a100bt13fab8776o6ca";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(displayForecast);
+  }
 
 function displayForecast(response) {
   let forecast = response.data.daily;
@@ -86,7 +99,7 @@ function showTemp(response) {
   let tempElement = document.querySelector("#temperature");
   let description = document.querySelector("#weatherDescription");
   city.innerHTML = response.data.name;
-  tempElement.innerHTML = `${temperature} F°| C° `;
+temperatureElement.innerHTML = Math.round(temperature);
   description.innerHTML = `${response.data.weather[0].description}`;
 }
 
