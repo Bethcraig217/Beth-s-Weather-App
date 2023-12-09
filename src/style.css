@@ -67,6 +67,10 @@
                      background-repeat: no-repeat;
                      text-align: center;
                  }
+                 .info{
+                    font-size: 18px;
+                    font-family: 'Roboto Mono', sans-serif;
+                 }
         
                  h1 {
         
@@ -81,6 +85,7 @@
         
                      font-size: 25px;
                      color: #FFA3F8;
+                     opacity: 0.6;
                  }
         
                  .searching {

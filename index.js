@@ -54,7 +54,22 @@ function refreshWeather(response) {
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   getForecast(response.data.city)
 }
+function showTemp(response) {
+ 
+  let temperature = Math.round(response.data.main.temp);
+  let tempElement = document.querySelector("#temperature");
 
+
+  tempElement.innerHTML = `${temperature} F°| C° `;
+  description.innerHTML = `${response.data.weather[0].description}`;
+}
+
+
+function searchCity(city) {
+  let apiKey = "1a747f2d7ac32a100bt13fab8776o6ca";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(refreshWeather);
+}
 function getForecast(city) {
     let apiKey = "1a747f2d7ac32a100bt13fab8776o6ca";
     let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
@@ -92,20 +107,4 @@ function displayForecast(response) {
   });
   forecastHTML += `</div>`;
   forecastElement.innerHTML = forecastHTML;
-}
-function showTemp(response) {
-  let city = document.querySelector("#city");
-  let temperature = Math.round(response.data.main.temp);
-  let tempElement = document.querySelector("#temperature");
-  let description = document.querySelector("#weatherDescription");
-  city.innerHTML = response.data.name;
-temperatureElement.innerHTML = Math.round(temperature);
-  description.innerHTML = `${response.data.weather[0].description}`;
-}
-
-
-function searchCity(city) {
-  let apiKey = "1a747f2d7ac32a100bt13fab8776o6ca";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
-  axios.get(apiUrl).then(refreshWeather);
 }

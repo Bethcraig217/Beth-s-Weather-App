@@ -46,9 +46,10 @@
             <h2 class="currentLocation"></h2>
             <h3></h3>
             <div class="styling">
-                <h5 class="dayTime" id="current-time"></h5>
+                <h4 class="dayTime" id="current-time"></h4>
             </div>
-            <span class="temperature" id="temperature"></span>
+            
+            <div class="weather-app-temperature" id="temperature"></div>
 
             <h6 class="weatherDescription" id="weatherDescription"></h6>
 
@@ -62,9 +63,7 @@
         </div>
       
 
-            <div id="temperature">
-                <!-- Temperature value will be displayed here -->
-            </div>
+           
         </div>
 
         <div class="footer">
@@ -73,10 +72,13 @@
                     <div class="col-md-2">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title" id="monday">Mon</h5>
-                                <img
-                                    src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png" />
+                                <h5 class="card-title" id="monday"></h5>
+                                <div class="icon">
+                                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png"
+                                        alt="" width="42" />
+                                </div>
                                 <br />
+                    
                                 <p class="card-text">56˚</p>
                             </div>
                         </div>
@@ -84,11 +86,13 @@
                     <div class="col-md-2">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title" id="monday">Tues</h5>
-                                <img
-                                    src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png" />
+                                <h5 class="card-title" id="monday"></h5>
+                                <div class="icon">
+                                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png"
+                                        alt="" width="42" />
+                                </div>
                                 <br />
-
+                    
                                 <p class="card-text">56˚</p>
                             </div>
                         </div>
@@ -96,20 +100,13 @@
                     <div class="col-md-2">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title" id="monday">Tues</h5>
-                                <img
-                                    src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png" /><br />
-
-                                <p class="card-text">56˚</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title" id="monday">Tues</h5>
-                                <img
-                                    src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png" />
+                                <h5 class="card-title" id="monday"></h5>
+                               <div class= "icon"> 
+                               <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png" 
+                                    alt=""
+                                    width="42"
+                                    />
+                                    </div>
                                 <br />
 
                                 <p class="card-text">56˚</p>
@@ -119,11 +116,13 @@
                     <div class="col-md-2">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title" id="monday">Tues</h5>
-                                <img
-                                    src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png" />
+                                <h5 class="card-title" id="monday"></h5>
+                                <div class="icon">
+                                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png"
+                                        alt="" width="42" />
+                                </div>
                                 <br />
-
+                    
                                 <p class="card-text">56˚</p>
                             </div>
                         </div>
@@ -131,11 +130,13 @@
                     <div class="col-md-2">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title" id="monday">Tues</h5>
-                                <img
-                                    src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png" />
+                                <h5 class="card-title" id="monday"></h5>
+                                <div class="icon">
+                                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png"
+                                        alt="" width="42" />
+                                </div>
                                 <br />
-
+                    
                                 <p class="card-text">56˚</p>
                             </div>
                         </div>
@@ -145,7 +146,8 @@
         </div>
     </div>
     <br />
-    <p>
+  
+        <div class="info">
         This project was coded by
         <a href="https://github.com/Bethcraig217" target="_blank">Beth Craig</a>
         and is
@@ -153,7 +155,8 @@
             on GitHub</a>
         and
         <a href="https://tiny-kringle-eafc5a.netlify.app//" target="_blank">hosted on Netlify</a>
-    </p>
+        </div>
+    
 
     <script src="index.js"></script>
 </body>
