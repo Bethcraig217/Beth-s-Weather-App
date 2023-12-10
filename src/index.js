@@ -51,16 +51,9 @@ function refreshWeather(response) {
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="monIcon" />`;
 
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-  windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
+  windSpeedElement.innerHTML = `${response.data.wind.speed}mph`;
   getForecast(response.data.city)
 }
-function convertKmToMph(km) {
-  return km * 0.621371;
-}
-
-var kmPerHour = 100; // Replace with your desired value
-var mph = convertKmToMph(kmPerHour);
-console.log(mph);
 function showTemp(response) {
  
   let temperature = Math.round(response.data.main.temp);

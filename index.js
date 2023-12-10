@@ -51,7 +51,7 @@ function refreshWeather(response) {
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="monIcon" />`;
 
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-  windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
+  windSpeedElement.innerHTML = `${response.data.wind.speed}mph`;
   getForecast(response.data.city)
 }
 function showTemp(response) {
